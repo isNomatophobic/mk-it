@@ -1,0 +1,211 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.MainHome-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.Navbar-Container {
+  min-height: 70px;
+  width: 100%;
+  background-color: #141618;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 3%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.Navbar-Container h3 {
+  font-size: 1em;
+  background: #00ccf0;
+  background: linear-gradient(45deg, #00ccf0 0%, #9700d0 100%);
+  color: transparent;
+  background-clip: text;
+}
+
+.Navbar-Container input {
+  border: 1px solid #9700d0;
+  border-radius: 4px;
+  padding: 1em 9.5em 1em 0.5em;
+}
+
+.Navbar-Container button {
+  border: 1px #9700d0 solid;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: white;
+  color: lightBlack;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.HomeHero-Container {
+  background-color: #242166;
+  font-size: 16px;
+  padding: 6em 3em;
+  color: white;
+  position: relative;
+}
+
+.HomeHero-Container:after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.HomeHero-Container .Header-Container {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+
+.HomeHero-Container h2 {
+  font-size: 2.5em;
+}
+
+.HomeHero-Container p {
+  text-align: left;
+  font-size: 1em;
+}
+
+.HomeHero-Container button {
+  background-color: #00ccf0;
+  border-radius: 5px;
+  border: none;
+  padding: 0.7em 2em;
+  color: inherit;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.HomeHero-Container button:focus {
+  background-color: #00a1bd;
+  outline: 2px solid white;
+}
+
+.HomeHero-Container button:hover {
+  background-color: #00a1bd;
+}
+
+.HomeHero-Container .HomeHero-Background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.HomeHero-Container .HomeHero-Background .circle {
+  border-radius: 50%;
+  position: absolute;
+  background-color: #2b2779;
+}
+
+.HomeHero-Container .HomeHero-Background .circle1 {
+  width: 200px;
+  height: 200px;
+  top: -40px;
+  left: -40px;
+}
+
+.HomeHero-Container .HomeHero-Background .circle2 {
+  width: 200px;
+  height: 200px;
+  bottom: -30px;
+  left: 10%;
+}
+
+.HomeHero-Container .HomeHero-Background .circle3 {
+  width: 700px;
+  height: 700px;
+  bottom: 0px;
+  right: -100px;
+}
+
+.Favorites-Container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#242166), to(#0F0D21));
+  background: linear-gradient(#242166 0%, #0F0D21 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  color: white;
+  position: relative;
+  z-index: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.Favorites-Container h4 {
+  font-size: 1.5em;
+  border-bottom: 3px solid #9700d0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.Favorites-Container .Favorites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.Favorites-Container .FavoritesCard {
+  min-width: 170px;
+  min-height: 220px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=home.styles.css.map */

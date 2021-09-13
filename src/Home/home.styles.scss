@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+.MainHome-Container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+$lightBlack:#141618;
+$blue:#242166;
+$lightBlue:rgba(0,204,240,1);
+$darkBlue:#0F0D21;
+$purple:rgba(151,0,208,1);
+.Navbar-Container{
+    min-height: 70px;
+    width: 100%;
+    background-color: $lightBlack;
+    display: flex;
+    justify-content: space-between;
+    padding:0px 3%;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+    h3{
+        font-size: 1em;
+        background: rgb(0,204,240);
+        background: linear-gradient(45deg, $lightBlue 0%, $purple 100%);
+        color:transparent;
+        background-clip: text;
+        }
+
+}
+.Search-Container{
+    input{
+        border:1px solid $purple;
+        border-radius: 4px;
+        padding:1em 9.5em 1em 0.5em;
+        
+    }
+    button{
+        border:1px $purple solid;
+        padding:1em;
+        border-radius: 4px;
+        background-color:white;
+        color: lightBlack;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+}
+.HomeHero-Container{
+    background-color: $blue;
+    font-size: 16px;
+    padding:6em 3em;
+    color:white;
+    position: relative;
+    &:after{
+        content:' ';
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width:100%;
+        height: 1px;
+        background-color: rgba(white,0.8);
+        z-index: 1;
+    }
+    .Header-Container{
+        max-width: 500px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+    }
+    h2{
+        font-size: 2.5em;
+    }
+    p{
+        text-align: left;
+        font-size: 1em;
+
+    }
+    button{
+        background-color: $lightBlue;
+        border-radius: 5px;
+        border:none;
+        padding:0.7em 2em;
+        color:inherit;
+        font-weight: 600;
+        font-size: 1em;
+        &:focus{
+            background-color: darken($lightBlue,10%);
+            outline:2px solid white;
+        }
+        &:hover{
+            background-color: darken($lightBlue,10%);
+        }
+    }
+    .HomeHero-Background{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:0;
+        z-index: 1;
+        
+        filter:blur(2px);
+        .circle{
+            border-radius: 50%;
+            position: absolute;
+            background-color: lighten($blue, 5%);
+        }
+        .circle1{
+            width: 200px;
+            height: 200px;
+            top:-40px;
+            left:-40px;
+        }
+        .circle2{
+            width: 200px;
+            height: 200px;
+            bottom:-30px;
+            left:10%;
+        }
+        .circle3{
+            width: 700px;
+            height: 700px;
+            bottom:0px;
+            right:-100px;
+        }
+    }
+}
+
+.Favorites-Container{
+    background: linear-gradient( $blue 0%, $darkBlue 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    z-index: 0;
+    flex-grow:1;
+    h4{
+        font-size: 1.5em;
+        border-bottom: 3px solid $purple;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+    }
+    .Favorites{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        width:100%;
+    }
+    .FavoritesCard{
+        min-width: 170px;
+        min-height: 220px;
+        border:2px solid white;
+        border-radius: 4px;
+    }
+}
