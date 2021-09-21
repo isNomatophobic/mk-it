@@ -1,0 +1,138 @@
+$lightBlack:#141618;
+$blue:#242166;
+$lightBlue:rgba(0,204,240,1);
+$darkBlue:#0F0D21;
+$purple:rgba(151,0,208,1);
+.SearchPage-Container{
+    background-color: $darkBlue;
+    color:white;
+    position: relative;
+    overflow: hidden;
+}
+.SearchPage-Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 25px;
+    margin-top:70px;
+    position: relative;
+    z-index: 1;
+
+}
+.MovieList-Container{
+    margin: 0% 3%;
+    padding-bottom: 20px;
+}
+.Movie-Container{
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+    background-color: $lightBlack;
+    border-radius: 4px;
+    color:white;
+    border:1px solid white;
+    padding:1em;
+    .MovieInfo{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        h3{
+            line-height: 0em;
+            font-size: 1.5em;
+        }
+        .MovieGenres{
+            font-size: 0.9em;
+            line-height: 0em;
+
+        }
+        .MovieDescription{
+            font-size: 1em;
+        }
+        a{
+            color:$lightBlue;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            &:hover{
+                border-color: $lightBlue;
+            }
+        }
+    }
+    button{
+        margin-top:1em;
+    }
+}
+.MovieImage-Container{
+    min-width: 200px;
+    max-width: 400px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.MovieHighlights{
+    margin-left:2em;
+}
+.SearchPage-Background{
+    z-index: 0;
+    position: relative;
+    font-size: 100px;
+    .circle{
+        border-radius: 50%;
+        background-color: lighten($darkBlue, 10%);
+        position: fixed;
+        filter: blur(3px);
+    }
+    .circle1{
+        top:10%;
+        right:10%;
+        width: 5em;
+        height: 5em;
+    }
+    .circle2{
+        bottom:-1em;
+        right:-1em;
+        width: 3em;
+        height: 3em;
+    }
+}
+@media (max-width:630px)
+{
+    .MovieList-Container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .Movie-Container{
+        flex-direction: column-reverse;
+        min-width: 70%;
+        .MovieInfo{
+            align-items: center;
+            margin:0;
+            margin:10px 0px;
+        }
+        .MovieHighlights{
+            margin:0;
+        }
+        .MovieDescription{
+            display: none;
+        }
+        .MovieLink{
+            display: none;
+        }
+        button{
+            display: none;
+        }
+    }
+}

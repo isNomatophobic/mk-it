@@ -15,49 +15,6 @@
   overflow: hidden;
 }
 
-.Navbar-Container {
-  min-height: 70px;
-  width: 100%;
-  background-color: #141618;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0px 3%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 16px;
-  position: relative;
-  z-index: 2;
-}
-
-.Navbar-Container h3 {
-  font-size: 1em;
-  background: #00ccf0;
-  background: linear-gradient(45deg, #00ccf0 0%, #9700d0 100%);
-  color: transparent;
-  background-clip: text;
-}
-
-.Navbar-Container input {
-  border: 1px solid #9700d0;
-  border-radius: 4px;
-  padding: 1em 9.5em 1em 0.5em;
-}
-
-.Navbar-Container button {
-  border: 1px #9700d0 solid;
-  padding: 1em;
-  border-radius: 4px;
-  background-color: white;
-  color: lightBlack;
-  font-weight: 500;
-  margin-left: 10px;
-}
-
 .HomeHero-Container {
   background-color: #242166;
   font-size: 16px;
@@ -78,19 +35,22 @@
 }
 
 .HomeHero-Container .Header-Container {
-  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1;
   position: relative;
+}
+
+.HomeHero-Container .Header-Info {
+  max-width: 500px;
+  text-align: left;
 }
 
 .HomeHero-Container h2 {
@@ -98,8 +58,12 @@
 }
 
 .HomeHero-Container p {
-  text-align: left;
   font-size: 1em;
+}
+
+.HomeHero-Container a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .HomeHero-Container button {
@@ -110,6 +74,7 @@
   color: inherit;
   font-weight: 600;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .HomeHero-Container button:focus {
@@ -200,6 +165,7 @@
           align-items: center;
   gap: 30px;
   width: 100%;
+  padding: 0px 1em;
 }
 
 .Favorites-Container .FavoritesCard {
@@ -207,5 +173,11 @@
   min-height: 220px;
   border: 2px solid white;
   border-radius: 4px;
+}
+
+@media (-webkit-max-device-pixel-ratio: 0.010416666666666666), (max-resolution: 1dpi) {
+  .Favorites {
+    overflow-y: auto;
+  }
 }
 /*# sourceMappingURL=home.styles.css.map */

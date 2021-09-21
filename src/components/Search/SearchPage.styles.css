@@ -1,0 +1,186 @@
+.SearchPage-Container {
+  background-color: #0F0D21;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.SearchPage-Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 50px;
+  font-size: 25px;
+  margin-top: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.MovieList-Container {
+  margin: 0% 3%;
+  padding-bottom: 20px;
+}
+
+.Movie-Container {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+  background-color: #141618;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid white;
+  padding: 1em;
+}
+
+.Movie-Container .MovieInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Movie-Container .MovieInfo h3 {
+  line-height: 0em;
+  font-size: 1.5em;
+}
+
+.Movie-Container .MovieInfo .MovieGenres {
+  font-size: 0.9em;
+  line-height: 0em;
+}
+
+.Movie-Container .MovieInfo .MovieDescription {
+  font-size: 1em;
+}
+
+.Movie-Container .MovieInfo a {
+  color: #00ccf0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.Movie-Container .MovieInfo a:hover {
+  border-color: #00ccf0;
+}
+
+.Movie-Container button {
+  margin-top: 1em;
+}
+
+.MovieImage-Container {
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.MovieImage-Container img {
+  width: 100%;
+  height: 100%;
+}
+
+.MovieHighlights {
+  margin-left: 2em;
+}
+
+.SearchPage-Background {
+  z-index: 0;
+  position: relative;
+  font-size: 100px;
+}
+
+.SearchPage-Background .circle {
+  border-radius: 50%;
+  background-color: #201b46;
+  position: fixed;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.SearchPage-Background .circle1 {
+  top: 10%;
+  right: 10%;
+  width: 5em;
+  height: 5em;
+}
+
+.SearchPage-Background .circle2 {
+  bottom: -1em;
+  right: -1em;
+  width: 3em;
+  height: 3em;
+}
+
+@media (max-width: 630px) {
+  .MovieList-Container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Movie-Container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    min-width: 70%;
+  }
+  .Movie-Container .MovieInfo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    margin: 10px 0px;
+  }
+  .Movie-Container .MovieHighlights {
+    margin: 0;
+  }
+  .Movie-Container .MovieDescription {
+    display: none;
+  }
+  .Movie-Container .MovieLink {
+    display: none;
+  }
+  .Movie-Container button {
+    display: none;
+  }
+}
+/*# sourceMappingURL=SearchPage.styles.css.map */

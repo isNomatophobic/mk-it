@@ -7,48 +7,12 @@
     min-height: 100vh;
     overflow: hidden;
 }
-$lightBlack:#141618;
+$lightBlack:#181b1f;
 $blue:#242166;
 $lightBlue:rgba(0,204,240,1);
 $darkBlue:#0F0D21;
 $purple:rgba(151,0,208,1);
-.Navbar-Container{
-    min-height: 70px;
-    width: 100%;
-    background-color: $lightBlack;
-    display: flex;
-    justify-content: space-between;
-    padding:0px 3%;
-    align-items: center;
-    font-size: 16px;
-    position: relative;
-    z-index: 2;
-    h3{
-        font-size: 1em;
-        background: rgb(0,204,240);
-        background: linear-gradient(45deg, $lightBlue 0%, $purple 100%);
-        color:transparent;
-        background-clip: text;
-        }
 
-}
-.Search-Container{
-    input{
-        border:1px solid $purple;
-        border-radius: 4px;
-        padding:1em 9.5em 1em 0.5em;
-        
-    }
-    button{
-        border:1px $purple solid;
-        padding:1em;
-        border-radius: 4px;
-        background-color:white;
-        color: lightBlack;
-        font-weight: 500;
-        margin-left: 10px;
-    }
-}
 .HomeHero-Container{
     background-color: $blue;
     font-size: 16px;
@@ -66,20 +30,28 @@ $purple:rgba(151,0,208,1);
         z-index: 1;
     }
     .Header-Container{
-        max-width: 500px;
         display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         z-index: 1;
         position: relative;
+    }
+    .Header-Info
+    {
+        max-width: 500px;
+        text-align: left;
+
     }
     h2{
         font-size: 2.5em;
     }
     p{
-        text-align: left;
         font-size: 1em;
 
+    }
+    a{
+        text-decoration: none;
+        color:inherit
     }
     button{
         background-color: $lightBlue;
@@ -89,6 +61,7 @@ $purple:rgba(151,0,208,1);
         color:inherit;
         font-weight: 600;
         font-size: 1em;
+        cursor: pointer;
         &:focus{
             background-color: darken($lightBlue,10%);
             outline:2px solid white;
@@ -155,11 +128,20 @@ $purple:rgba(151,0,208,1);
         align-items: center;
         gap:30px;
         width:100%;
+        padding:0px 1em;
+
     }
+
     .FavoritesCard{
         min-width: 170px;
         min-height: 220px;
         border:2px solid white;
         border-radius: 4px;
+    }
+}
+@media (max-resolution:1dpi)
+{
+    .Favorites{
+        overflow-y: auto;
     }
 }

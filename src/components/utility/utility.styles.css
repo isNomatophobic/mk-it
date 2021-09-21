@@ -1,0 +1,289 @@
+.App {
+  position: relative;
+}
+
+.Navbar-Container {
+  max-height: 70px;
+  width: 100%;
+  background-color: #181b1f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  font-size: 16px;
+  position: absolute;
+  z-index: 2;
+}
+
+.Navbar-Container h3 {
+  font-size: 1.5em;
+  background: #00ccf0;
+  background: linear-gradient(45deg, #00ccf0 0%, #9700d0 100%);
+  color: transparent;
+  background-clip: text;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.Navbar-Container h3:after {
+  content: '';
+  background: #00ccf0;
+  background: linear-gradient(45deg, #00ccf0 0%, #9700d0 100%);
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+}
+
+.Navbar-Container h3:hover {
+  color: white;
+}
+
+.Navbar-Container h3:hover:after {
+  opacity: 1;
+  top: 100%;
+}
+
+.Navbar-Container a {
+  text-decoration: none;
+  padding-left: 1%;
+}
+
+.Search-Container {
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Search-Container input {
+  border: none;
+  border-radius: 4px;
+  padding: 1em 20vw 1em 0.5em;
+}
+
+.Search-Container button {
+  border: 1px #9700d0 solid;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: white;
+  color: lightBlack;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.FavoriteButton-Container {
+  font-size: 16px;
+}
+
+.FavoriteButton-Container button {
+  padding: 1em 2em;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.FavoriteButton-Container button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.FavoriteButton-Container button:focus {
+  outline: 1px solid white;
+}
+
+.FavoriteButton-Container .Favorite-True {
+  border: 1px solid red;
+  color: red;
+}
+
+.FavoriteButton-Container .Favorite-False {
+  border: 1px solid green;
+  color: green;
+}
+
+.Footer-Container {
+  width: 100%;
+  background-color: #181b1f;
+  min-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.Footer-Container a {
+  text-decoration: none;
+}
+
+.Closure-Container {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.Closure-Container p {
+  font-size: 1em;
+}
+
+.Closure-Container a {
+  font-weight: 600;
+  background: #00ccf0;
+  background: linear-gradient(45deg, #00ccf0 0%, #9700d0 100%);
+  color: transparent;
+  background-clip: text;
+}
+
+.Socials-Container {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3px;
+}
+
+.Socials-Container svg {
+  width: 3em;
+  fill: white;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.Socials-Container svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.AccountActions-Container {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  padding-right: 3%;
+}
+
+.AccountActions-Container button {
+  padding: 0.7em 2em;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.AccountActions-Container .AccountActions-Log {
+  background: linear-gradient(45deg, #00ccf0 0%, #9700d0 100%);
+}
+
+.AccountActions-Container .AccountActions-Sign {
+  position: relative;
+  background: #181b1f;
+}
+
+.AccountActions-Container .AccountActions-Sign:before {
+  border-radius: 4px;
+  position: absolute;
+  padding: 0.5em 2em;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  background: linear-gradient(135deg, #9700d0 0%, #00ccf0 100%);
+  z-index: -1;
+}
+
+.AccountActions-Container .DesktopMenu-Container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.AccountActions-Container .MobileMenu-Container {
+  display: none;
+}
+
+.AccountActions-Container .MobileMenu-Container svg {
+  position: relative;
+  z-index: 2;
+}
+
+.AccountActions-Container .MobileMenu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+@media (max-width: 630px) {
+  .Navbar-Container a {
+    display: none;
+  }
+  .Navbar-Container h3 {
+    display: none;
+  }
+  .Search-Container {
+    padding: 0.5em;
+  }
+  .AccountActions-Container {
+    font-size: 13px;
+  }
+  .AccountActions-Container .DesktopMenu-Container {
+    display: none;
+  }
+  .AccountActions-Container .MobileMenu-Container {
+    display: block;
+  }
+  .Closure-Container {
+    font-size: 14px;
+  }
+  .Socials-Container {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=utility.styles.css.map */

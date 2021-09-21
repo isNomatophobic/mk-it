@@ -4,7 +4,7 @@ export default function Search() {
     return (
         <div className="Search-Container">
             <input placeholder="Search movie by title..."></input>
-            <button>Search</button>
+            {/* <button>Search</button> */}
         </div>
     )
 }

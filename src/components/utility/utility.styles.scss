@@ -1,0 +1,256 @@
+$lightBlack:#181b1f;
+$blue:#242166;
+$lightBlue:rgba(0,204,240,1);
+$darkBlue:#0F0D21;
+$purple:rgba(151,0,208,1);
+.App{
+    position: relative;
+
+}
+.Navbar-Container{
+    max-height: 70px;
+    width: 100%;
+    background-color: $lightBlack;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    font-size: 16px;
+    position: absolute;
+    z-index: 2;
+    h3{
+        font-size: 1.5em;
+        background: rgb(0,204,240);
+        background: linear-gradient(45deg, $lightBlue 0%, $purple 100%);
+        color:transparent;
+        background-clip: text;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        position: relative;
+        &:after{
+            content:'';
+            background: rgb(0,204,240);
+            background: linear-gradient(45deg, $lightBlue 0%, $purple 100%);
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            top:0;
+            left:0;
+         }
+         &:hover{
+             color:white;
+             &:after{
+                 opacity: 1;
+                 top:100%;
+
+             }
+         }
+    }
+    a{
+        text-decoration: none;
+        padding-left: 1%;
+    }
+
+}
+.Search-Container{
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    input{
+        border:none;
+        border-radius: 4px;
+        padding:1em 20vw 1em 0.5em;
+    }
+    // &:after{
+    //     color: white;
+    //     font-weight: 500;
+    //     content:'Search movie by title...';
+    //     background: grey;
+    //     position: absolute;
+    //     width: 100%;
+    //     min-height: 100%;
+    //     transition: all 0.3s ease;
+    //     bottom:0;
+    //     left:0;
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     border-radius: 4px;
+    //     align-items: center;
+    // }
+    // &:hover{
+    //     &:after{
+    //         content:'';
+    //         min-height: 0%;
+    //     }
+    // }
+    button{
+        border:1px $purple solid;
+        padding:1em;
+        border-radius: 4px;
+        background-color:white;
+        color: lightBlack;
+        font-weight: 500;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+.FavoriteButton-Container{
+    font-size: 16px;
+    button{
+        padding:1em 2em;
+        font-size: 0.8em;
+        font-weight: 600;
+        border-radius: 4px;
+        background-color: white;
+        transition:transform 0.2s ease;
+        &:hover{
+            transform:scale(1.1)
+        }
+        &:focus{
+            outline: 1px solid white;
+        }
+    }
+    .Favorite-True{
+        border:1px solid red;
+        color:red;
+    }
+    .Favorite-False{
+        border:1px solid green;
+        color:green;
+    }
+}
+.Footer-Container{
+    width: 100%;
+    background-color: $lightBlack;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color:white;
+    a{
+        text-decoration: none;
+    }
+}
+.Closure-Container
+{
+    margin-bottom: 6px;
+    font-size: 16px;
+    p{
+        font-size: 1em;
+    }
+    a{  
+        font-weight: 600;
+        background: rgb(0,204,240);
+        background: linear-gradient(45deg, $lightBlue 0%, $purple 100%);
+        color:transparent;
+        background-clip: text;
+    }
+}
+.Socials-Container{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:3px;
+    svg{
+        width: 3em;
+        fill:white;
+        transition: transform 0.2s ease;
+        &:hover{
+            transform:scale(1.1)
+        }
+    }
+}
+
+.AccountActions-Container{
+    font-size: 16px;
+    display: flex;
+    gap:1em;
+    padding-right: 3%;
+    button{
+        padding:0.7em 2em;
+        font-size: 0.9em;
+        font-weight: 600;
+        border-radius: 4px;
+        border:0;
+        color:white;
+        cursor: pointer;
+    }
+    .AccountActions-Log{
+        background: linear-gradient(45deg, $lightBlue 0%, $purple 100%);
+    }
+    .AccountActions-Sign{
+        position: relative;
+        background: $lightBlack;
+        &:before{
+            border-radius: 4px;
+            position: absolute;
+            padding:0.5em 2em;
+            content:'';
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            margin:-2px;
+            background: linear-gradient(135deg, $purple 0%, $lightBlue 100%);
+            z-index: -1;
+        }
+    }
+    .DesktopMenu-Container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
+        
+    }
+    .MobileMenu-Container{
+        display: none;
+        svg{
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .MobileMenu{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left:0;
+        min-height: 100vh;
+        background-color: rgba(red,0.3);
+    }
+}
+@media (max-width:630px)
+{
+    .Navbar-Container{
+        a{
+            display: none;
+        }
+        h3{
+            display: none;
+        }
+    }
+    .Search-Container{
+        padding:0.5em;
+    }
+    .AccountActions-Container{
+        font-size: 13px;
+        .DesktopMenu-Container{
+            display: none;
+            
+        }
+        .MobileMenu-Container{
+            display: block;
+        }
+    }
+    .Closure-Container{
+        font-size: 14px;
+    }
+    .Socials-Container{
+        font-size: 12px;
+    }
+}

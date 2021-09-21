@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from "./Navbar"
 import HomeHero from "./HomeHero"
 import Favorites from "./Favorites"
 import "./home.styles.css"
